@@ -15,3 +15,5 @@ size_t BKDRHash(const T *str)
 	}
 	return hash;
 }
+
+
