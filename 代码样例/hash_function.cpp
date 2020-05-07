@@ -44,3 +44,14 @@ size_t FNVHash(const T* str)
 	}
 	return hash;
 }
+
+// MySQL中出现的字符串哈希函数
+unsigned int MySQLhash(char *str)
+{
+    register unsigned int nr = 1, nr2 = 4;
+    while(*str) {
+        nr ^= (((nr & 63) + nr2)*((unsigned int)*str++)) + (nr << 8);
+        nr2 += 3;	
+    }
+    return (unsigned int)nr;
+}
