@@ -15,7 +15,6 @@ size_t BKDRHash(const T *str)
 	return hash;
 }
 
-
 // Arash Partow发明的一种hash算法 
 // 比较优秀的一种哈希算法
 unsigned int APhash(char *str)
@@ -30,7 +29,6 @@ unsigned int APhash(char *str)
 
     return (val & 0x7FFFFFFF);	
 }
-
 
 // Unix system系统中使用的一种著名hash算法，后来微软也在其hash_map中实现。
 template<class T>
